@@ -1,60 +1,59 @@
-SUPERMARKET BILLING SYSTEM
-This is a simple SUPERMARKET BILLING SYSTEM implemented in c++. It allows users to manage the inventory of the supermarket, generate bills for customers, and upadate stock levels accordingly.
-Features:
-*Display current stock: View the details of products currently in stock.
+# Supermarket Billing System
 
-*Add a new product to the stock:Add a new product to the inventory with details such as name, ID, price, and quantity.
+This is a simple **Supermarket Billing System** implemented in **C++**. It allows users to manage the inventory of the supermarket, generate bills for customers, and update stock levels accordingly.
 
-*Update product details: Modify the details of an existing product, including its name, price and quantity.
+## Features
 
-*Generate bill for a customer: Create a bill for a customer by adding products to the bill and calculating the total amount.
+- **Display Current Stock**: View the details of products currently in stock.
+- **Add a New Product to the Stock**: Add a new product to the inventory with details such as name, ID, price, and quantity.
+- **Update Product Details**: Modify the details of an existing product, including its name, price, and quantity.
+- **Generate Bill for a Customer**: Create a bill for a customer by adding products to the bill and calculating the total amount.
+- **Update Stock Based on Products Sold**: Automatically update the stock levels based on the products sold in the bill.
+- **Store Stock to a File**: Save the current stock details to a file for future references.
 
-*Update stock based on products sold: Automatically update the stock levels based on the products sold in the bill.
+## Usage
 
-*Store stock to a file: Save the current stock details to a file for future references.
+- **Display Current Stock**: Choose option `1` to view the details of products currently in stock.
+- **Add a New Product to the Stock**: Choose option `2` to add a new product to the inventory. Enter the details of the product when prompted.
+- **Update Product Details**: Choose option `3` to update the details of an existing product. Enter the ID of the product to update and provide the new details.
+- **Generate Bill for a Customer**: Choose option `4` to generate a bill for a customer. Enter the details of each product to add to the bill. Once all products are added, the bill will be displayed, and the stock will be updated accordingly.
+- **Exit**: Choose option `5` to exit the program.
 
-Usage:
-*Display current stock: Choose option 1 to view the details of products currently in stock.
+## File Structure
 
-*Add a new product to the stock: Choose option 2 to add a new product to the inventory. Enter the details of the product when prompted.
+- `main.cpp`: Contains the main function and user interface.
+- `Stock.h` and `Stock.cpp`: Define the `Stock` class and its functions for managing the inventory.
+- `Bill.h` and `Bill.cpp`: Define the `Bill` class and its functions for generating bills.
+- `stock.txt`: Text file to store the stock details.
 
-*Update product details: Choose option 3 to update the details of an existing product. Enter the ID of the product to update and provide the new details.
+## Setup
 
-*Generate bill for a customer: Choose option 4 to generate a bill for a customer. Enter the details of each product to add to the bill. Once all products are added, the bill will be displayed, and the stock will be updated accordingly.
+### 1. Download the Source Code
+Download the source code of the project.
 
-*Exit: Choose option 5 to exit the program
+### 2. Extract the Files
+Extract the downloaded files to a directory on your local machine.
 
-File Structure
-*	main.cpp: Contains the main function and user interface.
- 
-*	Stock.h and Stock.cpp: Define the Stock class and its functions for managing the inventory.
-  
-*	Bill.h and Bill.cpp: Define the Bill class and its functions for generating bills.
-  
-* stock.txt: Text file to store the stock details.
+### 3. Compile the Source Code
+Open a terminal or command prompt and navigate to the directory where you extracted the files. Then, compile the source code using a C++ compiler:
 
-Setup:
-1. Download the Source Code:
- 
-2. Download the source code of the project.
+```bash
+g++ main.cpp Stock.cpp Bill.cpp -o SupermarketBilling
+```
 
-3. Extract the Files:
-   Extract the downloaded files to a directory on your local machine.
-   
-4. Compile the Source Code:
-   Open a terminal or command prompt and navigate to the directory where you extracted the files. Then, compile the source code using a C++ compiler.
-   
-5. Run the Executable:
-   Once the compilation is successful, run the executable file from the terminal or command prompt:
+###4. Run the Executable
+Once the compilation is successful, run the executable from the terminal or command prompt:
 
-#Note:
-- Make sure you have a C++ compiler installed on your system.
+```bash
+./SupermarketBilling
+```
 
-- Ensure that all necessary files, including `main.cpp`, `Stock.h`, `Bill.h`, and any other required files, are present in the same directory.
+## Notes
 
-- Modify the compilation command if the file names or project structure is different.
-  
-- You may need to handle any dependencies or library installations manually if the project requires additional libraries.
+- **C++ Compiler Required**: Ensure that you have a working C++ compiler (like `g++`) installed on your system.
+- **File Organization**: Make sure all necessary files (`main.cpp`, `Stock.h`, `Stock.cpp`, `Bill.h`, `Bill.cpp`, and `stock.txt`) are located in the same directory.
+- **Custom File Structure**: If your project uses a different file structure or file names, update the compilation command accordingly.
+- **No External Libraries Needed**: This project uses standard C++ libraries. No additional dependencies are required.
+- **Data Persistence**: The stock data is saved to a file (`stock.txt`). Ensure you have the necessary permissions to read/write this file in your working directory.
+- **Cross-Platform**: The system should work on any OS (Windows, macOS, Linux) with minor adjustments to file paths or compilation commands.
 
-
-  
